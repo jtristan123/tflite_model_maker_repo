@@ -1,0 +1,30 @@
+
+| Component | Model                       | Release Year | Specs                                                |
+| --------- | --------------------------- | ------------ | ---------------------------------------------------- |
+| **CPU**   | AMD Ryzen 7 3700X           | 2019         | 8 cores / 16 threads @ 3.6 GHz (boost up to 4.4 GHz) |
+| **GPU**   | NVIDIA GeForce GTX 1060 6GB | 2016         | 1280 CUDA cores, 6 GB GDDR5                          |
+| **RAM**   | DDR4 Memory                 | —            | 32 GB Total                                          |
+
+
+⏱️ Training Time Comparison
+Device	Training Duration (100 epochs)
+GPU (GTX 1060)	490.83 seconds
+CPU (Ryzen 7 3700X)	965.90 seconds
+
+
+
+
+📊 Performance Summary
+Speedup with GPU: ~1.97× faster
+
+GPU acceleration provided nearly 2× performance improvement over the CPU in this training task.
+
+Despite the GTX 1060 being older, it still significantly boosts training due to TensorFlow’s GPU optimization.
+
+Software specifications
+
+CUDA Version	11.2
+cuDNN Version	8.1.1
+TensorFlow Version	2.8.4
+Python Version	3.9.x
+OS	Ubuntu 24.04 LTS (via WSL2)
