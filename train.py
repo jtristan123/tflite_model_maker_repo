@@ -12,11 +12,8 @@ from tflite_model_maker.config import QuantizationConfig
 import tensorflow as tf
 import time
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 06d48785420b8af878e25ddaa3c108f3dd2b3c38
 start_time = time.time()
 
 
@@ -46,35 +43,22 @@ with tf.device('/GPU:0'):
     model = object_detector.create(
         train_data, 
         model_spec=spec, 
-<<<<<<< HEAD
         batch_size=16, 
         train_whole_model=True, 
         epochs=2500
-=======
-        batch_size=8, 
-        train_whole_model=True, 
-        epochs=100
->>>>>>> 06d48785420b8af878e25ddaa3c108f3dd2b3c38
     )
 
 # Evaluate
 #model.evaluate(train_data)
 
 # Export
-<<<<<<< HEAD
     model.export(export_dir='exported-model-v5-81images-500epochs')
-=======
-    model.export(export_dir='exported-model-v4-68images-5epochs')
->>>>>>> 06d48785420b8af878e25ddaa3c108f3dd2b3c38
 
 end_time = time.time()
 
 print(f"\n⏱️ Training took {(end_time - start_time):.2f} seconds.\n")
 print("✓ Training and export complete. Files saved\n")
 print("2 step: Verify the model with verify_if_int8.py\n")
-<<<<<<< HEAD
 print("3 step: compiled with edgetpu_compiler exported-model-v6-81images-2500epochs/model.tflite\n")
 print("✓ Loaded", len(train_data), "images.")
-=======
 print("3 step: compiled with edgetpu_compiler exported-model-v4-68images-5epochs/model.tflite\n")
->>>>>>> 06d48785420b8af878e25ddaa3c108f3dd2b3c38
