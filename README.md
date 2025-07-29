@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# Project Car Collecting Cone (3C)
-this is the python code we used for the CCC
-All code shounld be save in the raspberry pi and ready to be used, use this a viewer
-<p align="center">
-   <img src="https://github.com/user-attachments/assets/57064fad-9244-4860-af7b-b79b4415d99c">
-<img width="848" height="480" alt="Object detector_screenshot_19 073 2025" src="https://github.com/user-attachments/assets/02e895c8-fc76-49fd-8dee-947fc14f85fb" />
-
-</p>
-=======
 # CCC Cone Detection with Coral Edge TPU
 
 This project demonstrates how to train, convert, and deploy a custom object detection model (cone detector) on the Google Coral USB Accelerator using TensorFlow Lite and Edge TPU.
@@ -113,4 +103,3 @@ https://docs.nvidia.com/cuda/archive/11.2.0/cuda-installation-guide-linux/index.
 downgrade GCC to 9.x 
 cuDNN 8.1.1 from link need both this and cuda to use gpu with tensorflow 2.8
 
->>>>>>> 06d48785420b8af878e25ddaa3c108f3dd2b3c38
