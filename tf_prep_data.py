@@ -2,6 +2,13 @@ import os
 import shutil
 import random
 from pathlib import Path
+import tensorflow as tf
+
+# List all physical devices recognized by TensorFlow
+print("Physical devices:", tf.config.list_physical_devices())
+
+# Specifically list GPU devices
+print("GPU devices:", tf.config.list_physical_devices('GPU'))
 
 # Set seed for reproducibility
 random.seed(42)                                 # sets a fixed random so shuffling is repeatable
