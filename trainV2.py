@@ -43,7 +43,6 @@ with tf.device('/GPU:0'):
 
     # Create the model
     spec = object_detector.EfficientDetLite0Spec()
-    spec.config.use_coco_metric = False # For Coral
     #spec = object_detector.EfficientDetLite0Spec(
     #    quantization_config=QuantizationConfig.for_int8()
     #)
@@ -54,14 +53,14 @@ with tf.device('/GPU:0'):
         batch_size=8, # 8 seems good too
         train_whole_model=True, 
         epochs=10, #50 is used expmle 
-        validation_data=validation_data
+        #validation_data=validation_data
     )
 
 # Evaluate
-    loss, accuracy = model.evaluate(test_data)
+    #loss, accuracy = model.evaluate(test_data)
 
 # Export
-    model.export(export_dir='trainV2withsplit2.0-exported-model-v7-81images-10epochs')
+    model.export(export_dir='trainV2withsplit2.0-exported-model-allbacktonormal')
 
 end_time = time.time()
 

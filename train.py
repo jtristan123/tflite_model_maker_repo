@@ -45,20 +45,20 @@ with tf.device('/GPU:0'):
         model_spec=spec, 
         batch_size=16, 
         train_whole_model=True, 
-        epochs=2500
+        epochs=5
     )
 
 # Evaluate
 #model.evaluate(train_data)
 
 # Export
-    model.export(export_dir='exported-model-v5-81images-500epochs')
+    model.export(export_dir='exported-model-v5-81images-trash')
 
 end_time = time.time()
 
 print(f"\n⏱️ Training took {(end_time - start_time):.2f} seconds.\n")
 print("✓ Training and export complete. Files saved\n")
 print("2 step: Verify the model with verify_if_int8.py\n")
-print("3 step: compiled with edgetpu_compiler exported-model-v6-81images-2500epochs/model.tflite\n")
+print("3 step: compiled with edgetpu_compiler exported-model-v6-81images-trash/model.tflite\n")
 print("✓ Loaded", len(train_data), "images.")
-print("3 step: compiled with edgetpu_compiler exported-model-v4-68images-5epochs/model.tflite\n")
+print("3 step: compiled with edgetpu_compiler exported-model-v4-68images-trash/model.tflite\n")
